@@ -1,0 +1,24 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    width: 100vw;
+    height: 100vh;
+}
+
+.outline {
+    box-sizing: border-box;
+    width: calc(100vw - 40pt);
+    height: calc(100vh - 40pt);
+    display: inline-block;
+    border: 2pt solid rgba(245, 245, 245, 0.4);
+    border-radius: 20pt;
+    margin: 20pt;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Bird</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/aframe-extras@7.0.0/dist/aframe-extras.min.js
+    "></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="outline"></div>
+    <a-scene vr-mode-ui="enabled: false">
+        <a-assets>
+            <a-asset-item id="bird" src="./model/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="camera" camera="fov: 80; zoom: 1;" position="0 2 5" orbit-controls="
+                target: #target;
+                minDistance:3;
+                maxDistance:100;
+                " mouse-cursor="">
+        </a-entity>
+
+
+        <a-entity position="0 0 0" id="target">
+            <a-entity gltf-model="#bird" animation-mixer scale="10 10 10" position="0 0 0"></a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
