@@ -5,12 +5,21 @@ body {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Pamors";
+    src: url("./fonts/regular/Pamors-Regular.otf") format("opentype");
+    src: url("./fonts/regular/Pamors-Regular.ttf") format("truetype");
+    src: url("./fonts/regular/Pamors-Regular.woff2") format("woff2");
+}
+
 body {
     position: relative;
     background-color: #2d3436;
     background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
     width: 100vw;
     height: 100vh;
+    text-align: center;
+    font-family: "Pamors";
 }
 
 .outline {
@@ -21,4 +30,28 @@ body {
     border: 2pt solid rgba(245, 245, 245, 0.4);
     border-radius: 20pt;
     margin: 20pt;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 72px;
+    background: #eee;
+    background: -webkit-linear-gradient(315deg, #eee 0%, #666 74%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    color: #eee;
+    display: block;
+    margin: 20pt;
+}
+
+.design {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    margin: 20pt 30pt;
 }
